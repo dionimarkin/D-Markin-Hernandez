@@ -1,0 +1,5 @@
+Este circuito corresponde al sistema de automatismo y control para un portón eléctrico vehicular, diseñado con lógica cableada.
+
+El sistema implementa sensores de final de carrera (FCA y FCC) para detectar los límites físicos de carrera (apertura y cierre total), desenergizando automáticamente las bobinas de accionamiento para proteger la integridad del motor. Además, integra señalización luminosa mediante pilotos para indicar visualmente el estado del proceso en tiempo real (puerta abierta, en movimiento, cerrada o falla).
+
+Optimizaciones potenciales: El diseño base puede evolucionar integrando un temporizador a la desconexión para automatizar el cierre temporizado tras la apertura, sensores fotoeléctricos de barrera para detección de obstáculos (seguridad peatonal/vehicular) y paradas de emergencia con enclavamientos adicionales.
