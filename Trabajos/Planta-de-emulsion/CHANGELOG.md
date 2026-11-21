@@ -6,3 +6,9 @@
 
 ## v001
 - El quemador se vuelve a encender cuando baje de 140 mientras no se presione STOP.Para lograr esto se agrego un contacto Y4 con autoretencion 
+
+## v002
+- Salidas físicas innecesarias cambiadas por memorias M. 
+- Contactos NO de M0 (START) en luces. 
+- STOP como NO por ser NC en físico.
+- Contacto añadido en rama de temperatura.
