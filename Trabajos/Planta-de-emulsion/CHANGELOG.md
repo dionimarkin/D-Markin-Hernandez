@@ -12,3 +12,6 @@
 - Contactos NO de M0 (START) en luces. 
 - STOP como NO por ser NC en físico.
 - Contacto añadido en rama de temperatura.
+
+## v003
+- Aumento lento de temperatura con t0 y t1.
