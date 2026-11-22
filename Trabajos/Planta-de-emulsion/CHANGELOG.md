@@ -15,3 +15,6 @@
 
 ## v003
 - Aumento lento de temperatura con t0 y t1.
+
+## v004 
+- Estado de emergencia por sobretemperatura con un contacto de termometro (temperatura sobre los 150 grados)
