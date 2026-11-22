@@ -18,3 +18,5 @@
 
 ## v004 
 - Estado de emergencia por sobretemperatura con un contacto de termometro (temperatura sobre los 150 grados)
+-
+- Invirtio los contactos x001 (STOP), x006 (>150), x003 (<130) para facilitar la simulacion 
