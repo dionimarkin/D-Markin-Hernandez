@@ -20,3 +20,6 @@
 - Estado de emergencia por sobretemperatura con un contacto de termometro (temperatura sobre los 150 grados)
 -
 - Invirtio los contactos x001 (STOP), x006 (>150), x003 (<130) para facilitar la simulacion 
+
+## v005
+- Se agrego una memoria diferente M5 para un estado de emergencia por fallo del quemador y la luz H4 que lo indica
