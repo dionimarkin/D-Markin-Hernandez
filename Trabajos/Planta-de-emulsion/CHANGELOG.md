@@ -23,3 +23,10 @@
 
 ## v005
 - Se agrego una memoria diferente M5 para un estado de emergencia por fallo del quemador y la luz H4 que lo indica
+
+## v006
+- Se agrego un boton seta como paro de emergencia.
+- Se le agrego un rele termico al contactor del quemador
+- Se implemento un cambio para modo manual con el contancto X010.
+- El quemador se enciende manual con X011.
+- Se unieron M4,M5,M6 y M7 en una linea M3, asi se juntan todas las emergencias y facilita los cambios y lectura del codigo.
