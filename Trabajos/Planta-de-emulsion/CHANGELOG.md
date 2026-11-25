@@ -40,11 +40,18 @@
 
 ## v007
 
-- Bomba de carga KM2 con X016 y autorretención.
-- Nivel mínimo X014 y nivel máximo X015.
-- Relé térmico X017 con M9, que detiene solo la bomba.
-- Luces H9 a H12.
-- Se corrigieron errores en H10, H11 y la luz del quemador.
+- Bomba que trae el asfalto al depósito (KM2, pulsador CARGA X016, con autorretención).
+- Lógica de nivel en el depósito: el nivel mínimo (X014) detiene el sistema y no arranca solo al recuperarse; el nivel máximo (X015) detiene la bomba.
+- Protección de la bomba con relé térmico (X017, memoria M9, con RESET). Detiene solo la bomba.
+- Luces de nivel mínimo (H9), cargando (H10), falla de la bomba (H11) y nivel máximo (H12).
+- Se corrigieron errores en las luces: H10 seguía al pulsador CARGA en lugar de la bomba, y H11 seguía al contacto del relé en lugar de M9. También se corrigió un error en la luz del quemador (verificar la redacción).
+
+## v008
+- Se eliminaron las multiples luces de emergencia y se puso una general que parpadea.
+- Se agrega una pantalla que lee la memoria que activo emergencia y muestra cual es el fallo.
+
+## v009
+- Se cambiaron las memorias de emergencia por memorias retensivas para que si se corta la luz guarden el estado de mergencia
 
 ## Convención temporal
 
@@ -55,4 +62,3 @@
 
 - [ ] Devolver la polaridad física a los contactos invertidos.
 - [ ] Cambiar K30 y K60 por K100 y K200.
-- [ ] Repetir la tabla completa de todas las versiones.
