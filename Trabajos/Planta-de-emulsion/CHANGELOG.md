@@ -66,6 +66,27 @@
 - X021 hace dos cosas a la vez: rompe la autorretención de M505 y reinicia C104. 
 - - Los totales sobreviven a un corte de luz.
 
+## v012
+
+Contactos de flanco y limpieza del Bloque A (renumeración, nombres y orden).
+
+### Contactos de flanco
+
+- START (X000) y CARGA (X016) pasaron a contactos de flanco ascendente. 
+- Un START o un CARGA pegado o mantenido ya no arranca el sistema ni la bomba después de un PARO, una emergencia o un corte de luz. Hace falta soltarlo y pulsarlo de nuevo.
+- El sistema y la bomba solo arrancan con una pulsación nueva del botón, no con el botón mantenido.
+
+### Renumeración y nombres
+
+- Se compactaron las direcciones X, Y, M, T y C, sin huecos: el permiso general (antes M3) es ahora M2 SIN_EMERGENCIA; la seta (antes M6) es M3 SETA_ACTIVA
+- Cada dispositivo tiene nombre claro en su comentario.
+
+### Orden de los rungs
+
+- Los rungs se ordenaron por dependencia, para que cada memoria se calcule antes de usarse: alarmas, T2, M504, C104 con su reinicio y M505, luego SIN_EMERGENCIA (M2), M0, M1, T0, T1, Y000 y Y001, después la estadística, las luces y el END.
+
+
+
 
 ## Convención temporal
 
