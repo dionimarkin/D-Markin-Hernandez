@@ -53,6 +53,20 @@
 ## v009
 - Se cambiaron las memorias de emergencia por memorias retensivas para que si se corta la luz guarden el estado de mergencia
 
+## v010
+- Alarma de tiempo de calentamiento excedido: M504 (retentiva, con enclavamiento y RESET), incluida en M3.
+- Un timer de 60 s (provisional, para simular) cuenta mientras M2 (pide calor) y el sistema en marcha estén activos, y vuelve a cero al superar 140 °C o al detenerse el sistema.
+- Para que el timer cuente sin cortes, el contacto de pulso de T0 salió del rung de M2 y pasó al rung del quemador (Y000). M2 ahora significa solo "pide calor".
+- La alarma detiene el quemador (por M3) y también la bomba (NC de M504 en el rung de la bomba). Decisión del usuario: este problema puede exigir limpiar o desmontar el depósito, y no tiene sentido seguir cargando.
+
+## v011
+- Contadores de estadística (16 bits, retentivos, K32767) que cuentan la memoria de cada alarma: C100 (M500), C101 (M501), C102 (M502), C103 (M503) y un contador para M504. Cada uno tiene su memoria de reinicio (M20 a M24).
+- Bloqueo: C104 (K2) cuenta alarmas M504. A la segunda seguida se enciende M505 (retentiva), que está en M3 y en el rung de la bomba y detiene todo.
+- "Seguidas": C104 se pone a cero cuando el asfalto supera 140 °C (contacto NO de X004 en el reinicio) y con el botón de mantenimiento X021.
+- X021 hace dos cosas a la vez: rompe la autorretención de M505 y reinicia C104. 
+- - Los totales sobreviven a un corte de luz.
+
+
 ## Convención temporal
 
 - Contactos invertidos para simular: X001, X002, X003, X006, X010, X012, X013, X014, X015 y X017.
